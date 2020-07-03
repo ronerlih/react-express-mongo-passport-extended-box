@@ -1,0 +1,43 @@
+
+body{
+  font-family:"Open Sans";
+}
+
+.spin {
+  animation: App-logo-spin infinite 2s linear;
+}
+.loading{
+  animation: App-loading infinite 3s linear;
+  pointer-events: none;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes App-loading {
+  0% {
+     opacity: 0.1;
+  }
+  25%{
+    opacity: 0.8;
+  }
+  50%{
+    opacity: 0.1;
+  }
+  75%{
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+/* fonts */
+/* font-family: 'Yellowtail' */
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+/* font-family: 'Open Sans' */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
