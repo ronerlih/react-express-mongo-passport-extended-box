@@ -1,6 +1,5 @@
 // get reference to DB 
 const db = require('../../models');
-const passport = require('passport');
 
 module.exports = {
 
@@ -9,7 +8,7 @@ module.exports = {
       
       //validate request
 		if (req.body.email && req.body.password) {
-			console.log(req.body.email, req.body.password);
+			console.log('login:', req.body.email);
 			db.User.authenticate(req.body.email, req.body.password, function (error, user) {
             
             // check error (including no user)
@@ -19,8 +18,6 @@ module.exports = {
 
             // user found
 				} else {
-               console.log(`login: `, user._id);
-               
                // save user to session to match on login
                req.session.user = user;
                //
@@ -67,7 +64,13 @@ module.exports = {
    
    // authenticate user
 	authenticate: (req, res, next) => {
-      console.log(req.session);
-      res.json(req.session.user);
+      req.session.user
+         ? console.log('\ncurrect session user: ', req.session.user)
+         : console.log('\nno user on session')
+      
+      // return user or no content
+      req.session.user
+         ? res.json(req.session.user)
+         : res.status(204).json(req.session.user)
    },
 };

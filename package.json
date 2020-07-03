@@ -38,6 +38,7 @@
     "ignore-styles": "^5.0.1",
     "jest": "24.9.0",
     "mongoose": "^5.9.20",
+    "morgan": "^1.10.0",
     "passport": "^0.4.1"
   },
   "engines": {

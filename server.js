@@ -4,14 +4,20 @@ const path = require('path');
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require('./routes');
-
 const session = require('express-session');
-const initSession = require('./scripts/initSession');
 
+// initilize packages
+const logger = require('./scripts/logger');
+const initSession = require('./scripts/initSession');
 const errorHandler = require('./scripts/errorHandler');
 
 // middleware:
 // on every requsest will be called in order.
+
+console.log(process.env.NODE_ENV )
+// log requests in dev mode
+if(process.env.NODE_ENV === 'development')
+	app.use(logger);
 
 // initialize session memory.
 app.use(initSession(session));
@@ -43,6 +49,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/passport', {
 	useCreateIndex: true
 });
 
+// start server and listen to requests.
 app.listen(PORT, function () {
 	console.log(`\n🌎 ==> API server now on http://localhost:${PORT}\n`);
 });
