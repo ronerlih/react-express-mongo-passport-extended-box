@@ -14,10 +14,8 @@ const errorHandler = require('./scripts/errorHandler');
 // middleware:
 // on every requsest will be called in order.
 
-console.log(process.env.NODE_ENV )
-// log requests in dev mode
-if(process.env.NODE_ENV === 'development')
-	app.use(logger);
+// log requests
+app.use(logger);
 
 // initialize session memory.
 app.use(initSession(session));

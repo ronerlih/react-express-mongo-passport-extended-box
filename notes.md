@@ -28,3 +28,8 @@
 
   --- added
   * morgan custom log
+
+  **add crypto env locally and remotely**
+CRYPTO_SALT=d931ea313942dfa0df363983b044dae9
+CRYPTO_PASS=sa%%m__2e%!ma'!mak#ss
+CRYPTO_ALGO=aes256

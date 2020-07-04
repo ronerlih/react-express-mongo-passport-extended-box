@@ -47,7 +47,7 @@ class Signup extends Component {
     // if good to go
 		userAPI
 				.signup({
-					username: this.state.username.trim(),
+					firstname: this.state.username.trim(),
 					email: this.state.email.trim(),
 					password: this.state.password.trim(),
 					passwordConf: this.state.passwordConf.trim()

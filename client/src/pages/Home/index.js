@@ -13,7 +13,7 @@ export default ( props ) => {
             <h5>user:</h5>
             { Object.keys(props.user)
                 .map( (field, i) => 
-                    <p key={i}> <strong>{field}</strong>: {props.user[field]}</p>) 
+                     <p key={i}> <strong>{ field }</strong>: { typeof props.user[field] == 'object' ? <ul><li>iv: {props.user[field].iv}</li><li>email: {props.user[field].encryptedData}</li></ul> : props.user[field]}</p>) 
             }
         </div>
         

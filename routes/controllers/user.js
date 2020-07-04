@@ -1,15 +1,17 @@
 // get reference to DB 
 const db = require('../../models');
+const { encrypt, decrypt } = require("../../scripts/crypto");
 
 module.exports = {
 
    // login user
 	login: (req, res, next) => {
       
+
       //validate request
 		if (req.body.email && req.body.password) {
-			console.log('login:', req.body.email);
-			db.User.authenticate(req.body.email, req.body.password, function (error, user) {
+           
+			db.User.authenticate( encrypt(req.body.email), req.body.password, function (error, user) {
             
             // check error (including no user)
             if (error || !user) {
@@ -20,8 +22,7 @@ module.exports = {
 				} else {
                // save user to session to match on login
                req.session.user = user;
-               //
-					req.user = user;
+               console.log('login:', user.firstname, '\n!Bad practice, dont log users info')
 					return res.json(user);
 				}
          });
@@ -39,7 +40,8 @@ module.exports = {
    
       // create user in db
       db.User.create({
-         email: req.body.email,
+         firstname: req.body.firstname,
+         email: encrypt(req.body.email),
          password: req.body.password
       })
 
@@ -52,7 +54,7 @@ module.exports = {
    },
       
    signout: (req, res) => {
-      console.log('signed out:', req.session.user.email )
+      console.log('signed out:', req.session.user.firstname )
       // destroy session
       req.session.destroy();
       // clear cookie on the client side
