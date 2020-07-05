@@ -4,7 +4,7 @@
   "description": "react-passport-mongo-express",
   "main": "index.js",
   "scripts": {
-    "test": "jest --no-cache && cd client && npm run test",
+    "test": "jest --no-cache",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": " node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",

@@ -7,6 +7,7 @@ install:
   - npm install -g codecov
 scripts:
   - npm run test
+  - cd client && npm run test
 cache:
   directories:
     - node_modules
