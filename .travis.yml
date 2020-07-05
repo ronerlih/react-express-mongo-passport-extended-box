@@ -5,12 +5,13 @@ branches:
     - master
 install:
   - npm install -g codecov
+  - npm install -g coveralls
+  - cd client && yarn
 scripts:
   - npm run test
-  - cd client && npm run test
 cache:
   directories:
     - node_modules
-notifications:
-  webhooks: 
-    - https://coveralls.io/webhook?repo_token=COVERALLS_REPO_TOKEN
+#notifications:
+ # webhooks: 
+  #  - https://coveralls.io/webhook?repo_token=COVERALLS_REPO_TOKEN
