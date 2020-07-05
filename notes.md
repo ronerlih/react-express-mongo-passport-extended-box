@@ -36,3 +36,30 @@ CRYPTO_ALGO=aes256
 
 * supertest session
 * supertest user controller
+
+* to add
+devops
+   autoscale
+   docker
+
+alerts, monitoring
+   errors
+   node memory
+   db usage
+   latency time
+   load balancing upscale-downscale
+   gracefull terminations
+
+* cache
+   server requests
+   sessions
+   db
+   front end cache and offline experience
+
+* node cluster, multi core
+
+* tests
+   * unit tests, express + rect
+   * integration tests, routes
+   * end to end with puppeteer
+   * stress/load tests
