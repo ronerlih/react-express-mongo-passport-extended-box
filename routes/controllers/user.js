@@ -7,7 +7,6 @@ module.exports = {
    // login user
 	login: (req, res, next) => {
       
-
       //validate request
 		if (req.body.email && req.body.password) {
            

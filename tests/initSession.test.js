@@ -6,11 +6,10 @@
 //    test routes
 //    test errors
 
-
-const initSession = require('../scripts/initSession');
-const express = require('express');
+const initSession = require('../initSession');
 const session = require('express-session');
 const request = require('supertest');
+const express = require('express');
 
 describe('Server session tests', () => {
 	describe('Constructor', () => {
@@ -95,12 +94,3 @@ describe('Server session tests', () => {
 		
 	});
 });
-
-// describe("further tests", () => {
-//    it("should throw an error...", () => {
-//    const cb = () => `call initi session and create an error`;
-//    const err = new Error("Expected...");
-
-//    expect(cb).toThrow(err);
-//    });
-// });
