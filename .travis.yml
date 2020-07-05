@@ -6,7 +6,7 @@ branches:
 install:
   - npm install -g codecov
 scripts:
-  - npm run coveralls
+  - npm run test
 cache:
   directories:
     - node_modules
