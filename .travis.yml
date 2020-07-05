@@ -3,8 +3,8 @@ node_js: "12"
 branches:
   only:
     - master
-before_install:
-  - export COVERALLS_PARALLEL=true
+install:
+  - npm install -g codecov
 scripts:
   - npm run coveralls
 cache:

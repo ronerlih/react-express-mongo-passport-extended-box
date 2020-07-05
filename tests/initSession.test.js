@@ -6,7 +6,7 @@
 //    test routes
 //    test errors
 
-const initSession = require('../initSession');
+const initSession = require('../scripts/initSession');
 const session = require('express-session');
 const request = require('supertest');
 const express = require('express');
