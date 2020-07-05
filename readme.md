@@ -1,5 +1,6 @@
  [![Build Status](https://travis-ci.com/ronerlih/passport-express-mongo-react-box.svg?branch=master)](https://travis-ci.com/ronerlih/passport-express-mongo-react-box) [![Coverage Status](https://coveralls.io/repos/github/ronerlih/passport-express-mongo-react-box/badge.svg?branch=master)](https://coveralls.io/github/ronerlih/passport-express-mongo-react-box?branch=master)
 
+ [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/35012f6865fd497895ca4f1386597511)](https://www.codacy.com/manual/ronerlih/react-express-mongo-passport-extended-box?utm_source=github.com&utm_medium=referral&utm_content=ronerlih/react-express-mongo-passport-extended-box&utm_campaign=Badge_Coverage) 
 ## Mongo-Express-React-Passport boilerplate.
  * express backend
  * mogoose + mongodb ( users collection )

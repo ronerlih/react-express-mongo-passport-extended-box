@@ -17,9 +17,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npm run coveralls",
+    "test": "CI=true react-scripts test --coverage && npm run coveralls",
     "coveralls:dev": "react-scripts test --coverage && cat ./coverage/lcov.info | coveralls",
-    "coveralls": "CI=true react-scripts test --coverage && cat ./coverage/lcov.info | codecov",
+    "coveralls": " cat ./coverage/lcov.info | coveralls | npm run codecy",
+    "codecy": "curl -Ls https://coverage.codacy.com/get.sh | bash -",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
