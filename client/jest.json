@@ -1,4 +1,4 @@
 {
    "setupFilesAfterEnv": ["<rootDir>src/setupTests.js"],
-   "coverageDirectory": "<rootDir>coverage/"
+   "coverageDirectory": "<rootDir>src/coverage/"
  }
