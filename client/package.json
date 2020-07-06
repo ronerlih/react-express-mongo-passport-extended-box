@@ -19,10 +19,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "CI=true react-scripts test --coverage && npm run coveralls",
+    "test": "react-scripts test --coverage && npm run coveralls",
     "coveralls:dev": "react-scripts test --coverage && cat ./coverage/lcov.info | coveralls",
     "coveralls": " cat ./coverage/lcov.info | codecov | npm run codecy",
-    "codecy": "curl -Ls https://coverage.codacy.com/get.sh | bash -",
+    "codecy": "if-env CI=true && wget -qO - https://coverage.codacy.com/get.sh | sh || curl -Ls https://coverage.codacy.com/get.sh | bash - ",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
