@@ -9,7 +9,6 @@ install:
   - cd client && yarn
 scripts:
   - npm run coveralls
-  - cd client && npm run test            
 
 cache:
   directories:
