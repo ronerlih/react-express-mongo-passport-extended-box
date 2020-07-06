@@ -8,7 +8,7 @@ install:
   - npm install -g coveralls
   - cd client && yarn
 scripts:
-  - npm run test
+  - npm run coveralls
 cache:
   directories:
     - node_modules
