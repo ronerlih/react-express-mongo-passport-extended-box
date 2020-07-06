@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --coverage && npm run coveralls",
     "coveralls:dev": "react-scripts test --coverage && cat ./coverage/lcov.info | coveralls",
-    "coveralls": " cat ./coverage/lcov.info | codecov",
+    "coveralls": " cat ./coverage/lcov.info | codecov ",
     "codecy": "if-env CI=true && wget -qO - https://coverage.codacy.com/get.sh | sh || curl -Ls https://coverage.codacy.com/get.sh | bash - ",
     "eject": "react-scripts eject"
   },
