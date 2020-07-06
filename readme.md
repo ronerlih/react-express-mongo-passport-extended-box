@@ -1,7 +1,7 @@
  [![Build Status](https://travis-ci.com/ronerlih/passport-express-mongo-react-box.svg?branch=master)](https://travis-ci.com/ronerlih/passport-express-mongo-react-box) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/35012f6865fd497895ca4f1386597511)](https://www.codacy.com/manual/ronerlih/react-express-mongo-passport-extended-box?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ronerlih/react-express-mongo-passport-extended-box&amp;utm_campaign=Badge_Grade) 
 | <span style="font-weight:100"> test coverage </span> | |
 | --- | --- |
-| [![Coverage Status](https://coveralls.io/repos/github/ronerlih/passport-express-mongo-react-box/badge.svg?branch=master)](https://coveralls.io/github/ronerlih/passport-express-mongo-react-box?branch=master) | Backend (Express.js) | 
+| [![Coverage Status](https://coveralls.io/repos/github/ronerlih/react-express-mongo-passport-extended-box/badge.svg?branch=master)](https://coveralls.io/github/ronerlih/react-express-mongo-passport-extended-box?branch=master) | Backend (Express.js) | 
 | [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/35012f6865fd497895ca4f1386597511)](https://www.codacy.com/manual/ronerlih/react-express-mongo-passport-extended-box?utm_source=github.com&utm_medium=referral&utm_content=ronerlih/react-express-mongo-passport-extended-box&utm_campaign=Badge_Coverage) | Frontend (React.js) |
    
 ## Mongo-Express-React-Passport boilerplate.
